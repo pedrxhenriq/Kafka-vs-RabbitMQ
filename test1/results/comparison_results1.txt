@@ -1,0 +1,41 @@
+================================================================================
+COMPARAÇÃO DE LATÊNCIA: RABBITMQ vs KAFKA
+================================================================================
+
+📖 METODOLOGIA:
+--------------------------------------------------------------------------------
+Ambos os testes medem LATÊNCIA END-TO-END, que inclui:
+  • Tempo de criação e serialização da mensagem no producer
+  • Tempo de transmissão pela rede (localhost)
+  • Tempo de processamento e armazenamento no broker
+  • Tempo de entrega ao consumer
+  • EXCLUI desserialização JSON (medida separadamente)
+
+Configurações do teste:
+  • 100 mensagens enviadas
+  • Mensagens persistentes (durabilidade)
+  • Ambiente: localhost (sem latência de rede real)
+  • Python com bibliotecas pika (RabbitMQ) e kafka-python (Kafka)
+================================================================================
+
+Métrica              |        RabbitMQ |           Kafka |       Diferença | Vencedor       
+--------------------------------------------------------------------------------
+Latência Média       |        37.30 ms |         6.17 ms |       -31.13 ms | Kafka          
+Latência Mínima      |         5.49 ms |         2.39 ms |        -3.10 ms | Kafka          
+Latência Máxima      |        58.05 ms |       123.19 ms |       +65.14 ms | RabbitMQ       
+Mediana              |        37.93 ms |         4.63 ms |       -33.30 ms | Kafka          
+Desvio Padrão        |        13.29 ms |        11.98 ms |        -1.31 ms | Kafka          
+Percentil 50         |        38.08 ms |         4.64 ms |       -33.44 ms | Kafka          
+Percentil 90         |        55.31 ms |         7.45 ms |       -47.86 ms | Kafka          
+Percentil 95         |        56.90 ms |         8.30 ms |       -48.60 ms | Kafka          
+Percentil 99         |        58.05 ms |       123.19 ms |       +65.14 ms | RabbitMQ       
+
+================================================================================
+RESUMO:
+--------------------------------------------------------------------------------
+VENCEDOR: Kafka (7/9 métricas)
+
+Diferença percentual na latência média: -83.46%
+RabbitMQ - Coeficiente de Variação: 35.63%
+Kafka    - Coeficiente de Variação: 194.17%
+================================================================================
