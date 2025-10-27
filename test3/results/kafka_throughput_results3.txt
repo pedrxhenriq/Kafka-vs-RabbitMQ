@@ -1,0 +1,42 @@
+======================================================================
+KAFKA - RELATÓRIO DE THROUGHPUT (TAXA DE PROCESSAMENTO)
+======================================================================
+
+📖 METODOLOGIA DO TESTE:
+----------------------------------------------------------------------
+Este teste avalia a capacidade de processamento contínuo do Kafka
+sob alto volume de mensagens, medindo o throughput global do sistema.
+
+CONFIGURAÇÃO:
+  - Total de mensagens: 100,000
+  - Tipo de mensagem: JSON (~100 bytes)
+  - Modo de envio: Sequencial (produtor único)
+  - ACK mode: all (aguarda réplicas)
+  - Broker: localhost:9092
+  - Tópico: throughput_test (1 partição, 1 réplica)
+
+MÉTRICA PRINCIPAL:
+  Throughput = Total de mensagens / Tempo total
+  (Mensagens processadas por segundo)
+======================================================================
+
+📊 RESULTADOS:
+----------------------------------------------------------------------
+Total de mensagens enviadas: 100,000
+Mensagens com falha: 0
+Tempo total de execução: 6.611 segundos
+Taxa de sucesso: 100.00%
+
+🚀 THROUGHPUT: 15,125.35 mensagens/segundo
+   Equivalente a: 15.13k msg/s
+   Equivalente a: 907,521 msg/minuto
+   Equivalente a: 54,451,273 msg/hora
+======================================================================
+
+📈 ANÁLISE DE DESEMPENHO:
+----------------------------------------------------------------------
+Timestamp início: 2025-10-27T20:08:01.888577
+Timestamp fim: 2025-10-27T20:08:08.499993
+Duração: 6.611s
+Tempo médio por mensagem: 0.066 ms
+======================================================================

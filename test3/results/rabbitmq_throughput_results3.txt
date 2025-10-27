@@ -1,0 +1,40 @@
+======================================================================
+RABBITMQ - RELATÓRIO DE THROUGHPUT (TAXA DE PROCESSAMENTO)
+======================================================================
+
+📖 METODOLOGIA DO TESTE:
+----------------------------------------------------------------------
+Este teste avalia a capacidade de processamento contínuo do RabbitMQ
+sob alto volume de mensagens, medindo o throughput global do sistema.
+
+CONFIGURAÇÃO:
+  - Total de mensagens: 100,000
+  - Tipo de mensagem: JSON (~100 bytes)
+  - Modo de envio: Sequencial (produtor único)
+  - Persistência: Habilitada (delivery_mode=2)
+  - Broker: localhost:5672
+  - Fila: throughput_test (durável)
+
+MÉTRICA PRINCIPAL:
+  Throughput = Total de mensagens / Tempo total
+======================================================================
+
+📊 RESULTADOS:
+----------------------------------------------------------------------
+Mensagens enviadas: 100,000
+Mensagens com falha: 0
+Tempo total: 7.345s
+Taxa de sucesso: 100.00%
+
+🚀 THROUGHPUT: 13,614.42 msg/s
+   Equivalente a: 13.61k msg/s
+   Equivalente a: 816,865 msg/minuto
+   Equivalente a: 49,011,906 msg/hora
+======================================================================
+
+📈 ANÁLISE:
+----------------------------------------------------------------------
+Início: 2025-10-27T20:11:09.498223
+Fim: 2025-10-27T20:11:16.843377
+Tempo médio/msg: 0.073 ms
+======================================================================
