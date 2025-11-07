@@ -20,22 +20,22 @@ Configurações do teste:
 
 Métrica              |        RabbitMQ |           Kafka |       Diferença | Vencedor       
 --------------------------------------------------------------------------------
-Latência Média       |        45.69 ms |      1670.13 ms |     +1624.44 ms | RabbitMQ       
-Latência Mínima      |         0.80 ms |      1568.54 ms |     +1567.74 ms | RabbitMQ       
-Latência Máxima      |        90.55 ms |      1874.64 ms |     +1784.09 ms | RabbitMQ       
-Mediana              |        52.05 ms |      1669.56 ms |     +1617.51 ms | RabbitMQ       
-Desvio Padrão        |        28.78 ms |        59.92 ms |       +31.14 ms | RabbitMQ       
-Percentil 50         |        52.51 ms |      1670.60 ms |     +1618.09 ms | RabbitMQ       
-Percentil 90         |        84.86 ms |      1746.82 ms |     +1661.96 ms | RabbitMQ       
-Percentil 95         |        87.84 ms |      1756.38 ms |     +1668.54 ms | RabbitMQ       
-Percentil 99         |        90.55 ms |      1874.64 ms |     +1784.09 ms | RabbitMQ       
+Latência Média       |        45.69 ms |        17.26 ms |       -28.43 ms | Kafka          
+Latência Mínima      |         0.80 ms |         3.12 ms |        +2.32 ms | RabbitMQ       
+Latência Máxima      |        90.55 ms |       111.56 ms |       +21.01 ms | RabbitMQ       
+Mediana              |        52.05 ms |        13.94 ms |       -38.11 ms | Kafka          
+Desvio Padrão        |        28.78 ms |        14.09 ms |       -14.69 ms | Kafka          
+Percentil 50         |        52.51 ms |        14.02 ms |       -38.49 ms | Kafka          
+Percentil 90         |        84.86 ms |        31.00 ms |       -53.86 ms | Kafka          
+Percentil 95         |        87.84 ms |        41.79 ms |       -46.05 ms | Kafka          
+Percentil 99         |        90.55 ms |       111.56 ms |       +21.01 ms | RabbitMQ       
 
 ================================================================================
 RESUMO:
 --------------------------------------------------------------------------------
-VENCEDOR: RabbitMQ (9/9 métricas)
+VENCEDOR: Kafka (6/9 métricas)
 
-Diferença percentual na latência média: +3555.35%
+Diferença percentual na latência média: -62.22%
 RabbitMQ - Coeficiente de Variação: 62.99%
-Kafka    - Coeficiente de Variação: 3.59%
+Kafka    - Coeficiente de Variação: 81.63%
 ================================================================================
